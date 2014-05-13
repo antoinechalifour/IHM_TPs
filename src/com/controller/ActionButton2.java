@@ -3,6 +3,7 @@ package com.controller;
 import java.awt.event.ActionEvent;
 import java.util.Observable;
 import java.util.Observer;
+import java.util.ResourceBundle;
 
 import javax.swing.AbstractAction;
 
@@ -14,7 +15,8 @@ public class ActionButton2 extends AbstractAction implements Observer{
 	
 	public ActionButton2(Modele m) {
 		this.m = m;
-		putValue(NAME, "Button +");
+		String name = ResourceBundle.getBundle("messages", Constantes.locale).getString(Constantes.plus);
+		putValue(NAME, name);
 	}
 	
 	@Override
